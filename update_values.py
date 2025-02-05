@@ -39,8 +39,8 @@ def update_values():
                         crypto[key] = 0
                 crypto['initialized'] = True
 
-    with open('cryptocurrencies.json', 'w') as f:
-        json.dump(cryptocurrencies, f)
+    #with open('cryptocurrencies.json', 'w') as f:
+        #json.dump(cryptocurrencies, f)
 
 if __name__ == "__main__":
     while True:
