@@ -1,24 +1,34 @@
 const ctx = document.getElementById('cryptoChart').getContext('2d');
-
 const cryptoChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-    datasets: [{
-      label: 'Crypto Value',
-      data: [12, 19, 3, 5, 2, 3, 7],
-      backgroundColor: 'rgba(155, 89, 182, 0.2)',
-      borderColor: 'rgba(155, 89, 182, 1)',
-      borderWidth: 2,
-      fill: true
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      x: { grid: { display: false } },
-      y: { grid: { color: '#444' } }
+    type: 'line',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Portfolio Value',
+            data: [12000, 15000, 14000, 17000, 16000, 19000, 22000],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 2,
+            fill: false
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            x: {
+                display: true,
+                title: {
+                    display: true,
+                    text: 'Month'
+                }
+            },
+            y: {
+                display: true,
+                title: {
+                    display: true,
+                    text: 'Value in USD'
+                }
+            }
+        }
     }
-  }
 });
+
