@@ -33,7 +33,7 @@ def hello_world():
         crypto_regions = determine_region(crypto)
         for region in crypto_regions:
             regions[region].append(crypto)
-    return render_template('huh.html', regions=regions)
+    return render_template('index.html', regions=regions)
 
 @app.route('/data')
 def data():
